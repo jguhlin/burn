@@ -5284,15 +5284,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a66a03ae7c801facd77a29370b4faec201768915ac14a721ba36f20bc9c209b"
 
 [[package]]
-name = "regression"
-version = "0.14.0"
-dependencies = [
- "burn",
- "log",
- "serde",
-]
-
-[[package]]
 name = "relative-path"
 version = "1.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5899,6 +5890,15 @@ name = "simdutf8"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f27f6278552951f1f2b8cf9da965d10969b2efdea95a6ec47987ab46edfe263a"
+
+[[package]]
+name = "simple-regression"
+version = "0.14.0"
+dependencies = [
+ "burn",
+ "log",
+ "serde",
+]
 
 [[package]]
 name = "siphasher"
@@ -6999,7 +6999,7 @@ dependencies = [
  "js-sys",
  "log",
  "naga",
- "parking_lot 0.12.3",
+ "parking_lot 0.11.2",
  "profiling",
  "raw-window-handle",
  "smallvec",
@@ -7027,7 +7027,7 @@ dependencies = [
  "log",
  "naga",
  "once_cell",
- "parking_lot 0.12.3",
+ "parking_lot 0.11.2",
  "profiling",
  "raw-window-handle",
  "rustc-hash",
@@ -7068,7 +7068,7 @@ dependencies = [
  "ndk-sys",
  "objc",
  "once_cell",
- "parking_lot 0.12.3",
+ "parking_lot 0.11.2",
  "profiling",
  "range-alloc",
  "raw-window-handle",
@@ -7392,17 +7392,18 @@ checksum = "791978798f0597cfc70478424c2b4fdc2b7a8024aaff78497ef00f24ef674193"
 
 [[package]]
 name = "xtask"
-version = "0.5.0"
+version = "1.0.0"
 dependencies = [
  "log",
  "rstest",
  "xtask-common",
+ "xtask-macros",
 ]
 
 [[package]]
 name = "xtask-common"
 version = "0.1.0"
-source = "git+https://github.com/tracel-ai/xtask#6232e55e6ed057f1df285c4a04f4c7c3ac60ede2"
+source = "git+https://github.com/tracel-ai/xtask#7918432850ccf24387c4084ca6874e557e3e50f8"
 dependencies = [
  "anyhow",
  "clap 4.5.15",
@@ -7410,9 +7411,21 @@ dependencies = [
  "env_logger",
  "log",
  "rand",
+ "regex",
  "serde_json",
  "strum",
  "tracing-subscriber",
+ "xtask-macros",
+]
+
+[[package]]
+name = "xtask-macros"
+version = "0.1.0"
+source = "git+https://github.com/tracel-ai/xtask#7918432850ccf24387c4084ca6874e557e3e50f8"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.72",
 ]
 
 [[package]]
