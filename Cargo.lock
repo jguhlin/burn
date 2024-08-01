@@ -7390,7 +7390,7 @@ dependencies = [
 [[package]]
 name = "xtask-common"
 version = "0.1.0"
-source = "git+https://github.com/tracel-ai/xtask#0d00cf312f6c2fbb1576fb90b7695c1563fb237b"
+source = "git+https://github.com/tracel-ai/xtask#75c531bbfbe3d292127880c995f5ef4dce690e6d"
 dependencies = [
  "anyhow",
  "clap 4.5.13",
@@ -7408,7 +7408,7 @@ dependencies = [
 [[package]]
 name = "xtask-macros"
 version = "0.1.0"
-source = "git+https://github.com/tracel-ai/xtask#0d00cf312f6c2fbb1576fb90b7695c1563fb237b"
+source = "git+https://github.com/tracel-ai/xtask#75c531bbfbe3d292127880c995f5ef4dce690e6d"
 dependencies = [
  "proc-macro2",
  "quote",
