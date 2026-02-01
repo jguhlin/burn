@@ -56,6 +56,7 @@ pub(crate) fn batches_per_run(
     Ok(1)
 }
 
+#[allow(dead_code)]
 pub fn conv_im2col_1x1<R: CubeRuntime, const N: usize>(
     input: CubeTensor<R>,
     mut weight: CubeTensor<R>,
@@ -132,6 +133,7 @@ pub fn conv_im2col_1x1<R: CubeRuntime, const N: usize>(
 }
 
 /// Reshapes NHWC input to [(N, H, W), C]
+#[allow(dead_code)]
 fn reshape_input<R: CubeRuntime>(mut input: CubeTensor<R>) -> CubeTensor<R> {
     let rank = input.meta.num_dims();
     let dim_c = rank - 1;
@@ -154,6 +156,7 @@ fn reshape_input<R: CubeRuntime>(mut input: CubeTensor<R>) -> CubeTensor<R> {
     input
 }
 
+#[allow(dead_code)]
 fn is_spatial_contiguous(shape: &[usize], strides: &[usize]) -> bool {
     let rank = shape.len();
 
@@ -171,6 +174,7 @@ fn is_spatial_contiguous(shape: &[usize], strides: &[usize]) -> bool {
     true
 }
 
+#[allow(dead_code)]
 fn from_handle<R: CubeRuntime>(
     client: &ComputeClient<R>,
     device: &R::Device,

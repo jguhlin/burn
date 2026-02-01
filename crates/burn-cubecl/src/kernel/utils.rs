@@ -82,6 +82,7 @@ pub fn linear_view_alias<'a, R: CubeRuntime>(
     LinearViewLaunch::new::<LinearLayout>(buffer, layout)
 }
 
+#[allow(dead_code)]
 pub fn split_dim<R: CubeRuntime>(
     mut tensor: CubeTensor<R>,
     dim: usize,

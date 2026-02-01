@@ -49,6 +49,7 @@ pub fn matmul<R: CubeRuntime>(
     }
 }
 
+#[allow(dead_code)]
 pub(crate) fn launch_matmul_naive<R: CubeRuntime>(
     strategy: &Strategy,
     mut lhs: CubeTensor<R>,

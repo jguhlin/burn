@@ -11,6 +11,7 @@ mod im2col;
 
 mod tune_key;
 
+#[allow(unused_imports)]
 pub(crate) use backward_data::*;
 pub(crate) use conv_transpose2d::*;
 pub(crate) use conv_transpose3d::*;
