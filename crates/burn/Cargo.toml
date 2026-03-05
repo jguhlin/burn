@@ -166,7 +166,7 @@ candle-cuda = ["candle", "burn-candle/cuda"]
 candle-metal = ["burn-candle?/metal"]
 cuda = ["burn-cuda", "burn-dispatch?/cuda"]
 rocm = ["burn-rocm", "burn-dispatch?/rocm"]
-ndarray = ["burn-ndarray", "burn-dispatch?/ndarray"]
+ndarray = ["dep:burn-ndarray", "burn-dispatch?/ndarray"]
 tch = ["burn-tch"]
 vulkan = ["wgpu", "burn-wgpu/vulkan", "burn-dispatch?/vulkan"]
 webgpu = ["wgpu", "burn-wgpu/webgpu", "burn-dispatch?/webgpu"]
@@ -204,4 +204,3 @@ burn-ir = { path = "../burn-ir", version = "=0.21.0-pre.2", optional = true, def
 burn-dispatch = { path = "../burn-dispatch", version = "=0.21.0-pre.2", optional = true, default-features = false }
 
 cubecl = { workspace = true, default-features = false, optional = true }
-
