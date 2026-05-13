@@ -2,12 +2,9 @@ use alloc::vec::Vec;
 use burn_std::{DType, Shape, Slice};
 
 use crate::{
-    AutodiffBackend, Backend, ExecutionError, Scalar, TensorData,
-    ops::TransactionPrimitive,
-    tensor::{
-        BasicAutodiffOps, BasicOps, Bool, Device, IndexingUpdateOp, IntTensor, TensorKind,
-        TransactionOp,
-    },
+    AutodiffBackend, Backend, ExecutionError, IndexingUpdateOp, IntTensor, Scalar, TensorData,
+    TransactionPrimitive,
+    bridge::{BasicAutodiffOps, BasicOps, Bool, Device, TensorKind, TransactionOp},
 };
 
 impl<B: Backend> TransactionOp<B> for Bool {

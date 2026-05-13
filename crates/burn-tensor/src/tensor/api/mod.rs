@@ -50,5 +50,3 @@ pub use cast::*;
 pub use float::{DEFAULT_ATOL, DEFAULT_RTOL};
 pub use options::*;
 pub use transaction::*;
-
-pub use burn_backend::tensor::IndexingUpdateOp;
